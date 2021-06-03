@@ -2,13 +2,72 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Caesar Cipher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigilo, parente!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div id="root">
-    <h1>Hello world!</h1>
-  </div>
+
+<body class="color-bck-bd">
+  <header> 
+    <h1 id="sigilo">SIGILO, PARENTE!</h1>    
+  </header>
+
+  <main>
+    <article class="description">
+        <h2>Como funciona?</h2>
+      <p>Descrever o funcionamento e colocar link para o READme.md</p>
+    </article>
+
+    <section>
+      <form method="GET" action="">    
+        <nav id="input-number">
+          <label for="chave-deslocamento">Quantas posições você quer deslocar no alfabeto? Escolha entre 1 e 10.</label>
+          <input id="box-number" type="number" min="1" max="10">
+        </nav>
+        
+        <nav id="nav-left" class="input">
+          <nav id="input-encrypt">
+            <label for="encrypt">Quero sigilo!</label>
+            <input class="input-text" type="text" placeholder="Insira sua mensagem a ser cifrada" >
+            <input class="submit" type="submit">
+          </nav>  
+          
+          <nav id="input-decrypt">
+            <label for="decrypt" >Qual a tradução?</label>
+            <input class="input-text" type="text" placeholder="Insira sua mensagem a ser decifrada" >
+            <input class="submit" type="submit">
+          </nav>
+        </nav>  
+
+        <nav id="nav-right" class="exibit">
+          <nav id="result-encrypt">
+            <input class="result" type= >
+            <!--inserir caixa de resultado-->
+          </nav>
+
+
+          <nav id="result-decrypt">
+            <!--inserir caixa de resultado-->
+          </nav>
+
+        </nav>
+       
+
+      </form>    
+    </section>  
+        
+      
+
+      
+    
+
+  </main>
+      
+  <footer class="footer">
+    <p>Feito por Letícia Aniceto, 2021.</p>
+  </footer>
+
   <script src="index.js" type="module"></script>
 </body>
 </html>

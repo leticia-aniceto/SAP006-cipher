@@ -1,1 +1,56 @@
 /* css */
+.color-bck-bd {
+    background-color: #efe6ddff;
+}
+
+#sigilo {
+    color: #be6e46ff;
+    font-size: 45px;
+    text-align: center;
+    font-weight: 900;
+    padding-bottom: 1px;
+}
+
+.description {
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+#input-number {
+    padding-bottom: 25px;
+    padding-left: 40px;
+    float: left;
+}
+
+#box-number {
+    width: 7ch;
+    text-align: center;
+}
+
+.input{
+    margin-left: 40px;
+    width: 50ch;
+}
+
+.input-text {
+    border-color: #efe6ddff;
+    border-radius: 5px;
+    height: 17ch;
+    width: 20rem;
+}
+
+#input-decrypt {
+    padding-top: 30px;
+}
+
+.submit{
+    height: 35px;
+    border-radius: 5px;
+    border-color: rgb(219, 204, 188);
+}
+
+.footer {
+    margin-left: 40px;
+}
+
+
