@@ -3,6 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function check()
+    {
+       document.getElementById('resultado-msgcifrada').innerHTML = document.myform.cifrar.value;
+       document.getElementById('resultado-msgdecifrada').innerHTML = document.myform2.decifrar.value;
+       document.getElementById('box-number').innerHTML = document.formNumber.number;
+    }
+  </script>
+
   <title>Sigilo, parente!</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
@@ -17,44 +26,56 @@
     <article class="description">
         <h2>Como funciona?</h2>
       <p>Descrever o funcionamento e colocar link para o READme.md</p>
+     <br><br>
     </article>
 
-    <section>
-      <form method="GET" action="">    
+    <section id="box-input-number">
+      <form name="formNumber">    
         <nav id="input-number">
-          <label for="chave-deslocamento">Quantas posições você quer deslocar no alfabeto? Escolha entre 1 e 10.</label>
-          <input id="box-number" type="number" min="1" max="10">
+          <label for="chave-deslocamento"></label><strong>Quantas posições você quer deslocar no alfabeto? Escolha entre 1 e 10</strong></label>
+          <input id="box-number" name="number" type="number" min="1" max="10" required>
+          <input class="submit" type="submit">
         </nav>
-        
+      </form>
+    </section>
+    
+    <section id="boxes-input-result">
+      <nav id="boxes" class="box-input-result">
         <nav id="nav-left" class="input">
+
           <nav id="input-encrypt">
-            <label for="encrypt">Quero sigilo!</label>
-            <input class="input-text" type="text" placeholder="Insira sua mensagem a ser cifrada" >
-            <input class="submit" type="submit">
-          </nav>  
-          
+            <form name="myform">
+            <label for="encrypt"><strong>Quero sigilo!</strong></label>
+            <input class="input-text" type="text" name="cifrar" value="" placeholder="Insira sua mensagem a ser cifrada">
+            <input class="submit" type="submit" onclick="check(); return false">
+            <!-- return false after function for stop page to refresh --> 
+            </form>
+          </nav>
+
           <nav id="input-decrypt">
-            <label for="decrypt" >Qual a tradução?</label>
-            <input class="input-text" type="text" placeholder="Insira sua mensagem a ser decifrada" >
-            <input class="submit" type="submit">
+            <form name="myform2">
+            <label for="decrypt"><strong>Qual a tradução?</strong></label>
+            <input class="input-text" type="text" name="decifrar" value="" placeholder="Insira sua mensagem a ser decifrada">
+            <input class="submit" type="submit" onclick="check(); return false"> 
+            </form>
           </nav>
         </nav>  
-
+            
         <nav id="nav-right" class="exibit">
+
           <nav id="result-encrypt">
-            <input class="result" type= >
-            <!--inserir caixa de resultado-->
+            <p><strong>Mensagem cifrada:</strong></p>
+            <textarea name="resultado-cifrada" id="resultado-msgcifrada" cols="40" rows="10"></textarea>
           </nav>
-
-
+    
           <nav id="result-decrypt">
-            <!--inserir caixa de resultado-->
+            <p><strong>Mensagem decifrada:</strong></p>
+            <textarea name="resultado-decifrada" id="resultado-msgdecifrada" cols="40" rows="10"></textarea>
           </nav>
-
         </nav>
-       
+      </nav>  
 
-      </form>    
+          
     </section>  
         
       
@@ -64,9 +85,11 @@
 
   </main>
       
-  <footer class="footer">
+  <!--
+    <footer class="footer">
     <p>Feito por Letícia Aniceto, 2021.</p>
   </footer>
+    -->
 
   <script src="index.js" type="module"></script>
 </body>
