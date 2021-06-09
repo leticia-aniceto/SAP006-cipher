@@ -1,9 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 
-.color-bck-bd {
+
+body {
     background-color: #efe6ddff;
 }
 
@@ -15,56 +12,53 @@
     padding-bottom: 1px;
 }
 
-.description {
+article {
     margin-left: 40px;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-#input-number {
-    padding-bottom: 25px;
-    padding-left: 40px;
-    float: none;
-    width: auto;
+.slider-wrapper {
+    display: inline-block;
+    width: 20px;
+    height: 150px;
+    padding: 0;
+    margin-left: 40px;
+}
+
+
+.slider-wrapper input {
+    width: 300px;
+    height: 30px;
+    margin: 0;
+    transform-origin: 75px 75px;
+}
+
+form {
+    margin-left: 40px;
 }
 
 input:invalid:required {
     border: 2px dashed red;
 }
-  
-  
-#box-number {
-    width: 7ch;
-    text-align: center;
+    
+
+
+.input-result {
+    display: inline-block;
+
 }
 
-.box-input-result {
-    display: flex;
-    flex-flow: row wrap;
+div#nav-right {
+    margin-left: 25%;
 }
 
-/*
-#nav-left {
-    float: left;
-    width: 600px;
-    padding-top: 20px;
+
+div.input {
+    display: inline-block;
+    align-items: auto;
 }
 
-#nav-right {
-    float: right;
-    width: 600px;
-    padding-top: 20px;
-}
-*/
-
-.input{
-    margin-left: 40px;
-    width: 50ch;
-}
-
-.exibit {
-    margin-left: 30ch;
-    width: 50ch;
-}
 
 .input-text {
     border-color: #efe6ddff;
@@ -73,20 +67,13 @@ input:invalid:required {
     width: 20rem;
 }
 
-.result{
+textarea {
     border-color: #efe6ddff;
     border-radius: 5px;
     height: 17ch;
     width: 20rem;
 }
 
-#input-decrypt {
-    padding-top: 30px;
-}
-
-#result-decrypt {
-    padding-top: 50px;
-}
 
 .submit{
     height: 35px;
@@ -95,7 +82,7 @@ input:invalid:required {
     width: 4.5em;
 }
 
-.footer {
+footer {
     margin-left: 40px;
 }
 
