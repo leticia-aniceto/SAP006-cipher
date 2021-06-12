@@ -4,31 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  
-  <!--<script> 
-  function check(event) {
-    event.preventDefault();
-    let resultadoMsgCif = document.getElementById('resultado-msgcifrada')
-    resultadoMsgCif.innerHTML = document.myform.cifrar.value;
-    console.log("function check()");
-  
-    let resultadoMsgDecif = document.getElementById('resultado-msgdecifrada')
-    resultadoMsgDecif.innerHTML = document.myform2.decifrar.value;
-    console.log("function check()");
-  }
-  </script>-->
-
-
   <title>Sigilo, parente!</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header> 
-    <h1 id="sigilo">SIGILO, PARENTE!</h1>    
+  <header>   
   </header>
-
+  <h1 id="sigilo">SIGILO, PARENTE!</h1>  
   <main>
     <article>
         <h2>Como funciona?</h2>
@@ -36,26 +20,25 @@
     </article>
 
     <form name="formNumber">    
-      <label for="chave-deslocamento"></label><h3>Quantas posições você quer deslocar no alfabeto?</h3></label>
-       <input id="offset" name="number" type="number" min="1" max="25" required> 
+      <label for="chave-deslocamento"></label><h3>Quantas posições você quer deslocar no alfabeto?</h3></label><input id="offset" name="number" value="22" type="number" min="1" max="25" required> 
     </form>
   
     <section id="boxes-input-result">
+      
         <div id="nav-left" class="input">
-
           <div class="texto" id="input-encrypt">
             <form name="myform">
             <label for="encrypt"><h3>Quero sigilo!</h3></label>
-            <input id="texto-cifrar" class="input-text" type="text" name="cifrar" value="" placeholder=" Insira sua mensagem a ser cifrada">
-            <input id="button-cifrar" class="submit" type="submit">
+            <input id="textEncrypt" class="input-text" type="text" name="encrypt" value="" placeholder=" Insira sua mensagem a ser cifrada">
+            <input id="btnEncrypt" class="submit" type="submit">
             </form>
           </div>
 
           <div class="texto" id="input-decrypt">
             <form name="myform2">
             <label for="decrypt"><h3>Qual a tradução?</h3></label>
-            <input id="texto-decifrar" class="input-text" type="text" name="decifrar" value="" placeholder=" Insira sua mensagem a ser decifrada">
-            <input id="button-decifrar" class="submit" type="submit"> 
+            <input id="textDecrypt" class="input-text" type="text" name="decrypt" value="" placeholder=" Insira sua mensagem a ser decifrada">
+            <input id="btnDecrypt" class="submit" type="submit"> 
             </form>
           </div>
         </div>  
@@ -64,12 +47,12 @@
 
           <div id="result-encrypt">
             <p><h3>Mensagem cifrada:</h3></p>
-            <textarea name="resultado-cifrada" id="resultado-msgcifrada" cols="40" rows="10"></textarea>
+            <textarea name="resultEncrypt" id="resultEncrypt" cols="40" rows="10"></textarea>
           </div>
     
           <div id="result-decrypt">
             <p><h3>Mensagem decifrada:</h3></p>
-            <textarea name="resultado-decifrada" id="resultado-msgdecifrada" cols="40" rows="10"></textarea>
+            <textarea name="resultDecrypt" id="resultDecrypt" cols="40" rows="10"></textarea>
           </div>
         </div>  
 
@@ -85,7 +68,8 @@
       
   
   <footer>
-    <p>Feito por Letícia Aniceto, 2021.</p>
+    <div id="div-footer"><a href="http://github.com/leticia-aniceto"><img id="github" src="/img/github.png" class="media-object  img-responsive img-thumbnail"></a> 
+    </div>
   </footer>
     
 

@@ -1,68 +1,66 @@
-const codigoDaLetraASC = "".charCodeAt(0);
-console.log(codigoDaLetraASC);
-const tamanhoAlfabeto = 26;
-const cod1aLetra = 65;
-//let desloc = Number.("")
-//['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','y','z']
-let alfabeto = "";
-for (let i=65; i<=90; i+=1){
-  alfabeto += String.fromCodePoint
-}
-
-
+//funciona com maiúsculas e minúsculas, porém teste "alo Alo DEV"
+//erro no offset minusculo
 const cipher = {
   encode: function (offset, str) {
-    /* function checkInput (evt) {
-      var charCodeAt = evt.charCodeAt;
-      if (charCodeAt != 0){
-        if (charCodeAt < 65 || charCodeAt > 90){
-          evt.preventDefault();
-          displayWarning(
-            "Por favor utilize apenas letras maiúsculas." + "\n" + "charCodeAt:" + charCodeAt + "\n"
-          );
-        }
+    let encMsg = "";
+
+    for (let i = 0; i < str.length; i++) {
+      let code = str[i].charCodeAt(0);
+
+      if (code >= 65 && code <= 90) {
+        let resEncode = ((code + 65 + offset) % 26) + 65; 
+        //65 = maiuscula  26 = alfabeto (se for 52 entra em outros caracteres)
+        encMsg += String.fromCharCode(resEncode);
+      } else if (code >= 97 && code <= 122) {
+        let resEncode = ((code + 97 + offset) % 26) + 97; //97 = minuscula
+        encMsg += String.fromCharCode(resEncode);
+      } else {
+        encMsg += str[i]
+      } 
+    }
+    return encMsg;
+  },
+
+
+//funciona com maiúsculas e minúsculas, porém teste "alo Alo DEV"
+  decode: function (offset, str) {
+    let decMsg = "";
+
+    for (let i = 0; i < str.length; i++) {
+      let code = str[i].charCodeAt(0);
+
+      if (code >= 65 && code <= 90) {
+        let resDecode = ((code + 65 - offset) % 26) + 65;
+        decMsg += String.fromCharCode(resDecode);
+      } else if (code >= 97 && code <= 122) {
+        let resDecode = ((code + 97 - offset) % 26) + 97;
+        decMsg += String.fromCharCode(resDecode);
+      } else {
+        decMsg += str[i]
       }
-    } */
-  console.log("aqui offset", offset); 
-  console.log("aqui texto", str); 
-  } 
-
-  
-
-};
+  }
+  return decMsg;
+  },
+}
 
 export default cipher;
 
-/* usar código ASC 
-"A".charCodeAt --> descobrir o código da letra/posição 
-
-alfabeto começando A=0:
-(codigoDaLetra + desloc) % tamDoAlfabeto
-    F=5      +      7    % 26
 
 
-alfabeto começando A=65 (código ASC):
-A    B   (...) Z
-65  66         90
+  /* essa funciona com maiúsculas (não mexer)
+  encode: function (offset, str) {
+    let encMsg = "";
 
-((codigoDaLetraASC - cod1aLetra + desloc) % tamDoAlfabeto) + cod1aLetra
-1aLetra = A = 65 ("A".charCodeAt(0))
+    for (let i = 0; i < str.length; i++) {
+      let code = str[i].charCodeAt(0);
 
-"F".charCodeAt(0) -65
-return: 5
-"F".charCodeAt(0)
-70
-
-((codigoDaLetraASC - cod1aLetra + desloc) % tamDoAlfabeto) + cod1aLetra
-((70 -65 + 7) % 26) + 65
-
-
-String.fromCharCode(72)
-return: "H"
-
-function cifra(string) {
-  return ???
-}
-*/
-
-
+      if (code >= 65 && code <= 90) {
+        let resEncode = ((code + 65 + offset) % 26) + 65;
+        encMsg += String.fromCharCode(resEncode);
+      } else {
+        encMsg += str[i] 
+      }
+    }
+    return encMsg;
+  },
+  */

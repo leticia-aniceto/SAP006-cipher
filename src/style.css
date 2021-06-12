@@ -1,15 +1,33 @@
 
-
 body {
-    background-color: #efe6ddff;
+    background-color: rgba(240, 228, 179, 0.212); 
+    background-image: url("/img/IMG_6777.JPG") initial;
+    background-size: cover;
+    background-blend-mode: overlay;
 }
 
+header {
+    background-image: url(/img/pattern1.jpg);
+    height: 70px;
+}
+
+
 #sigilo {
-    color: #be6e46ff;
+    color: rgb(73, 55, 21);
     font-size: 45px;
     text-align: center;
-    font-weight: 900;
+    font-weight: 900px;
     padding-bottom: 1px;
+    ;
+}
+
+h2 {
+    font-weight: 600;
+
+}
+
+h3 {
+    font-weight: 565;
 }
 
 article {
@@ -27,22 +45,20 @@ article {
 }
 
 
-.slider-wrapper input {
-    width: 300px;
-    height: 30px;
-    margin: 0;
-    transform-origin: 75px 75px;
+#offset {
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    border-color: darkgray;
+    border-bottom-color: darkgray;
+    border-right-color: darkgray;
+    font-size: 16px;
 }
 
 form {
     margin-left: 40px;
 }
-
-input:invalid:required {
-    border: 2px dashed red;
-}
-    
-
+ 
 
 .input-result {
     display: inline-block;
@@ -61,29 +77,50 @@ div.input {
 
 
 .input-text {
-    border-color: #efe6ddff;
-    border-radius: 5px;
+    border-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    border-bottom-color: darkgray;
+    border-right-color: darkgray;
     height: 17ch;
     width: 20rem;
 }
 
 textarea {
-    border-color: #efe6ddff;
+    border-color: darkgray;
+    border-radius: 10px;
+    border-bottom-color: darkgray;
+    border-right-color: darkgray;
+    border-top-color: darkgray;
     border-radius: 5px;
     height: 17ch;
     width: 20rem;
+    border-style:double;
 }
 
 
 .submit{
     height: 35px;
     border-radius: 5px;
-    border-color: rgb(219, 204, 188);
+    border-color: rgb(221, 219, 219);
     width: 4.5em;
 }
 
 footer {
-    margin-left: 40px;
+    
+    align-items: center;
+    background-image: url(/img/pattern1.jpg);
+    background-repeat:repeat-x ;
+    background-image: repeating-linear-gradient();
+}   
+
+
+
+#github {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 5px;
+
 }
 
 
