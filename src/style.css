@@ -1,88 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
 
 body {
-    background-color: rgba(240, 228, 179, 0.212); 
-    background-image: url("/img/IMG_6777.JPG") initial;
-    background-size: cover;
-    background-blend-mode: overlay;
+    background-color: #ecece7; 
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 3em;
 }
 
 header {
-    background-image: url(/img/pattern1.jpg);
-    height: 70px;
+    display: flex;
+    width: 100%;
 }
 
+img#figure {
+    width: 70%;
+    object-fit: none;
+}
 
-#sigilo {
+h1 {
     color: rgb(73, 55, 21);
-    font-size: 45px;
+    color: #e25d20;
+    font-size: 80px;
     text-align: center;
-    font-weight: 900px;
-    padding-bottom: 1px;
-    ;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    font-family: 'Chelsea Market', cursive;
+    font-weight: 100;
+    margin-bottom: 20px;
+    margin-top: initial;
 }
 
 h2 {
-    font-weight: 600;
-
+    font-weight: 200;
+    font-family:'Chelsea Market', cursive;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 3px;
 }
 
-h3 {
-    font-weight: 565;
+h2#steps {
+    background-color: #79cbb7fa; 
+    text-align: center;
+    padding: 20px;
+    background-clip: border-box;
+    max-inline-size: 50%;
+    margin: 30px 30px 30px 300px;
+    object-fit: cover;
+    height: auto;
+    width: 700px;
+    
 }
 
-article {
+div#steps-explain {
+    font-family: 'Caudex', serif;
+    font-weight: normal;
+    font-size: large;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin-top: 40px;
+}
+
+.steps {
+    width: 20%;
+    padding: 50px 20px 40px 20px;
+    background-color: #CEE8E0;   
+    border-radius: 10px;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Chelsea Market', cursive;
+    font-weight: 500;
+}
+
+p#info {
     margin-left: 40px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: 'Caudex', serif;
+    font-weight: normal;
+    text-align: justify;
 }
 
-.slider-wrapper {
-    display: inline-block;
-    width: 20px;
-    height: 150px;
-    padding: 0;
-    margin-left: 40px;
+section {
+    margin: 60px 400px 40px 300px;
 }
 
+form#offset-form {
+    display: inline-flex;
+    font-family: 'Caudex', serif;
+}
 
 #offset {
-    width: 50px;
-    height: 20px;
+    margin-left: 15px;
+    margin-top: 0.5em;
     border-radius: 5px;
     border-color: darkgray;
     border-bottom-color: darkgray;
     border-right-color: darkgray;
     font-size: 16px;
+    height: 30px;
+    width: 40px;
+    text-align: center;
 }
 
-form {
-    margin-left: 40px;
-}
- 
-
-.input-result {
-    display: inline-block;
-
+.label-box {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 20px;
+    font-weight: lighter;
 }
 
-div#nav-right {
-    margin-left: 25%;
+div#encrypt , #decrypt {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-
-div.input {
-    display: inline-block;
-    align-items: auto;
+div#decrypt {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-
 
 .input-text {
     border-color: rgb(240, 240, 240);
     border-radius: 10px;
     border-bottom-color: darkgray;
     border-right-color: darkgray;
-    height: 17ch;
-    width: 20rem;
+    height: 20ch;
+    width: 30rem;
+    background-color: #fff;
+}
+
+#btnEncrypt , #btnDecrypt {
+    margin-left: 10px;
 }
 
 textarea {
@@ -92,35 +152,39 @@ textarea {
     border-right-color: darkgray;
     border-top-color: darkgray;
     border-radius: 5px;
-    height: 17ch;
-    width: 20rem;
+    height: 18.5ch;
+    width: 30rem;
     border-style:double;
 }
-
 
 .submit{
     height: 35px;
     border-radius: 5px;
     border-color: rgb(221, 219, 219);
     width: 4.5em;
+    background: repeating-linear-gradient (90deg, )
 }
 
 footer {
-    
-    align-items: center;
-    background-image: url(/img/pattern1.jpg);
-    background-repeat:repeat-x ;
-    background-image: repeating-linear-gradient();
+    align-items: baseline;
+    display: flex;
+    justify-content: flex-end;
 }   
 
-
+p#footer {
+    margin: 0px 0px 10px 0px  ;
+    font-size:initial;
+    font-weight: lighter;
+}
 
 #github {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
-    margin-top: 5px;
-
+    margin-left: 10px;
+    margin-right: 5px;
 }
+
+
 
 

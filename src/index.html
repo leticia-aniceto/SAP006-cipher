@@ -1,78 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Sigilo, parente!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/img/icon.png">
 </head>
 
 <body>
-  <header>   
+  <header>
+    <div>
+      <h1>SIGILO, PARENTE!</h1>
+      <h2>Como funciona?</h2>
+      <p id="info">Aqui é um espaço seguro para você, parente! Quer mandar uma mensagem para alguém e que ela passe fora dos “radares” de madeireiros, caçadores, latifundiários e mineradores? Siga os passos abaixo:</p>
+    </div>
+
+    <img id="figure" src="/img/2indigenas.png" alt="duas mulheres indígenas">
   </header>
-  <h1 id="sigilo">SIGILO, PARENTE!</h1>  
+
   <main>
     <article>
-        <h2>Como funciona?</h2>
-      <p>Descrever o funcionamento e colocar link para o READme.md</p>
+      <h2 id="steps">PASSO-A-PASSO</h2>
+
+      <div id="steps-explain">
+        <div class="steps">Escolha sua chave de sigilo, um número aleatório que inverterá a posição das letras do alfabeto, deixando seu texto incompreensível</div>
+        <div class="steps">Mande este número para as pessoas que receberão sua mensagem, assim elas poderão traduzi-la utilizando a chave de vocês</div>
+        <div class="steps">Mantenha a chave sob vigilância em local seguro e comece a se comunicar de forma segura</div>
+      </div>
+
     </article>
 
-    <form name="formNumber">    
-      <label for="chave-deslocamento"></label><h3>Quantas posições você quer deslocar no alfabeto?</h3></label><input id="offset" name="number" value="22" type="number" min="1" max="25" required> 
-    </form>
-  
-    <section id="boxes-input-result">
-      
-        <div id="nav-left" class="input">
-          <div class="texto" id="input-encrypt">
-            <form name="myform">
-            <label for="encrypt"><h3>Quero sigilo!</h3></label>
-            <input id="textEncrypt" class="input-text" type="text" name="encrypt" value="" placeholder=" Insira sua mensagem a ser cifrada">
-            <input id="btnEncrypt" class="submit" type="submit">
-            </form>
-          </div>
+    <section>
+      <form id="offset-form" name="formNumber">
+        <label for="offset-key">
+          <p>Quantas posições você quer deslocar no alfabeto?</p>
+        </label>
+        <input id="offset" name="number" value="" type="number" min="-100" max="100" required>
+      </form>
+    </section>
 
-          <div class="texto" id="input-decrypt">
-            <form name="myform2">
-            <label for="decrypt"><h3>Qual a tradução?</h3></label>
-            <input id="textDecrypt" class="input-text" type="text" name="decrypt" value="" placeholder=" Insira sua mensagem a ser decifrada">
-            <input id="btnDecrypt" class="submit" type="submit"> 
-            </form>
-          </div>
-        </div>  
-            
-        <div id="nav-right" class="input">
+    <div id="encrypt">
+      <form name="myform">
+        <label for="encrypt">
+          <p class="label-box">Quero sigilo!</p>
+        </label>
+        <input id="textEncrypt" class="input-text" type="text" name="encrypt" value=""
+          placeholder=" Insira sua mensagem a ser cifrada">
+        <input id="btnEncrypt" class="submit" type="submit">
+      </form>
 
-          <div id="result-encrypt">
-            <p><h3>Mensagem cifrada:</h3></p>
-            <textarea name="resultEncrypt" id="resultEncrypt" cols="40" rows="10"></textarea>
-          </div>
-    
-          <div id="result-decrypt">
-            <p><h3>Mensagem decifrada:</h3></p>
-            <textarea name="resultDecrypt" id="resultDecrypt" cols="40" rows="10"></textarea>
-          </div>
-        </div>  
+      <div>
+        <p class="label-box">Mensagem cifrada:</p>
+        <textarea name="resultEncrypt" id="resultEncrypt" cols="30" rows="10"></textarea>
+      </div>
 
-          
-      </section>  
-        
-      
+    </div>
 
-      
-    
+    <div id="decrypt">
+      <form name="myform2">
+        <label for="decrypt">
+          <p class="label-box">Qual a tradução?</p>
+        </label>
+        <input id="textDecrypt" class="input-text" type="text" name="decrypt" value=""
+          placeholder=" Insira sua mensagem a ser decifrada">
+        <input id="btnDecrypt" class="submit" type="submit">
+      </form>
 
+      <div>
+        <p class="label-box">Mensagem decifrada:</p>
+        <textarea name="resultDecrypt" id="resultDecrypt" cols="30" rows="10"></textarea>
+      </div>
+    </div>
   </main>
-      
-  
+
   <footer>
-    <div id="div-footer"><a href="http://github.com/leticia-aniceto"><img id="github" src="/img/github.png" class="media-object  img-responsive img-thumbnail"></a> 
+    <p id="footer">Feito por Letícia Aniceto, 2021</p>
+   <div id="div-footer"><a href="http://github.com/leticia-aniceto"><img id="github" src="/img/github.png"
+          class="media-object  img-responsive img-thumbnail"></a>
     </div>
   </footer>
-    
 
   <script src="index.js" type="module"></script>
 </body>
+
 </html>
