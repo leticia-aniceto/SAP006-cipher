@@ -57,7 +57,8 @@ utilizá-la. A paleta de cores possui inspirações das cores da Mata
 Atlântica, cestarias indígenas e do açrafrão, pigmento utilizado em
 pinturas corporais. Abaixo temos a tela de início.
 
-![landing](https://user-images.githubusercontent.com/70327566/122655596-d574d480-d129-11eb-9069-31e302866cf9.png)
+![landing](https://user-images.githubusercontent.com/70327566/122657127-14f5ed80-d137-11eb-963d-2e490b14a276.png)
+
 
 
 ### Interface do usuário 
